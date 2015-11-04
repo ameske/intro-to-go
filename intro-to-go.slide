@@ -47,10 +47,8 @@ http://www.github.com/ameske/
 
 * Sounds great! How do I get started?
 
-** Start here after today
 - [[https://tour.golang.org/][Go Tour (Interactive Tutorial)]]
 
-** Then read as much of these as you can
 - [[https://golang.org/doc/code.html][Go Workflow]]
 - [[https://golang.org/doc/effective_go.html][Effective Go]]
 - [[https://golang.org/ref/spec][Language Spec]]
@@ -98,31 +96,37 @@ http://www.github.com/ameske/
 
 .play -numbers firstclassfunction.go
 
-* Goroutines
+* Concurrency - Goroutines
 
 - Lightweight threading (green threads)
 - Multiplexed onto OS threads (M to N)
 - Scheduling handled by the runtime
 - Invoked by using the keyword "go <function>"
 
-* Goroutines
+* Concurrency - Goroutines
 
+- In Go <1.5, one concurrent OS thread unless otherwise asked using runtime
+- Go >=1.5, one concurrent OS thread per core by default
 - Easier to write concurrent programs which can extend to parallel programs
 - .link http://blog.golang.org/concurrency-is-not-parallelism Concurrency is not Parallelsm
 
-* Channels
+* Concurrency - Channels
 
 - Based on Hoare's Communicating Sequential Processess (CSP)
 - "Don't Communicate by sharing memory; share memory by communicating"
 - Safe way to share data between two goroutines without having to use locks in your code
 
-* Channels and Goroutines
+* Concurrency - (contrived) Example
 
 .play -numbers goroutines.go
 
 * Real World Example: A Web Server
 
 .code web.go
+
+* Real World Example: More Advanced Web Stuff
+
+.link http://github.com/ameske/nfl-pickem
 
 * Go Language Tooling
 
@@ -137,6 +141,13 @@ http://www.github.com/ameske/
 * Testing
 
 .code testing/add_test.go
+
+* Packaging
+
+- package main
+- Scope determined by first character of a symbol
+- Access exported items by <package name>.<identifier>
+- Examples of this in code snippets, will look at std lib
 
 * Personal Observations from a year of Go
 
