@@ -47,13 +47,10 @@ http://www.github.com/ameske/
 
 * Sounds great! How do I get started?
 
-There's so much to learn. I'll get you started with initial setup and
-understanding and convince you this is something to look into!
-
 ** Start here after today
-- .link https://tour.golang.org/ Go Tour (Interactive Tutorial)
+- [[https://tour.golang.org/][Go Tour (Interactive Tutorial)]]
 
-*** Then read as much of these as you can
+** Then read as much of these as you can
 - [[https://golang.org/doc/code.html][Go Workflow]]
 - [[https://golang.org/doc/effective_go.html][Effective Go]]
 - [[https://golang.org/ref/spec][Language Spec]]
@@ -95,11 +92,11 @@ understanding and convince you this is something to look into!
 
 * Interfaces
 
-.code interface.go
+.play -numbers interface.go
 
 * First Class Functions
 
-.code firstclassfunction.go
+.play -numbers firstclassfunction.go
 
 * Goroutines
 
@@ -127,10 +124,6 @@ understanding and convince you this is something to look into!
 
 .code web.go
 
-* Interfaces At Work: io.Reader and io.Writer
-
-.code readerwriter.go
-
 * Go Language Tooling
 
 - Testing/Benchmarking (I'll demo this one)
@@ -139,18 +132,24 @@ understanding and convince you this is something to look into!
 
 * Testing
 
-.code add.go
+.code testing/add.go
 
 * Testing
 
-.code add_test.go
+.code testing/add_test.go
 
 * Personal Observations from a year of Go
-** Positives
+
+Positives:
+
 - gofmt (readability and consistency)
 - Standard Library
 - Boring (in all the right ways)
-** Pain Points
+
+* Personal Observations from a year of Go
+
+Pain Points:
+
 - Garbage collected
 - Dependency management in industry (particularly w/ closed source code)
 
@@ -162,4 +161,4 @@ understanding and convince you this is something to look into!
 
 * Questions
 
-That should be enough to hopefully get you excited! Any questions?
+Hopefully this gets you excited about learning Go. Any questions?

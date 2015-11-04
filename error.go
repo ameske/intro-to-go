@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
 	"os"
 )
@@ -11,5 +12,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println("WHAT? IMPOSSIBLE!?!")
+	b, err := ioutil.ReadAll(fd)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	log.Println(b)
 }
