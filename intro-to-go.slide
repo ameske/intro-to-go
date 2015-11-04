@@ -1,0 +1,165 @@
+Introduction to Go
+A Whirlwind Tour of Go
+4 Nov 2015
+Tags: intro
+
+Kyle Ames
+Sr. Software Engineer, FireEye, Inc.
+KyleAmes13@gmail.com
+http://www.github.com/ameske/
+
+* About Me
+
+- Sr. Software Engineer at FireEye, Inc.
+- API and Automation
+- Proud and (semi) active Gopher
+
+* What do I use Go For?
+
+- NFL Pick-Em Application (web application)
+- Tivo for Twitter
+- Dominion Simulator (command line)
+- Super secret work things I can't talk about
+
+* Why should you use Go?
+
+- Speed 
+- Simplicity 
+- Effectiveness 
+
+* Who else uses Go?
+
+- Docker
+- Cloudflare
+- Twitch
+- Cisco
+- FireEye
+- TONS of startups
+
+* Key Language Features
+
+- Simple synatx
+- No classes/inheritance
+- Small but fully featured standard library
+- First Class Functions
+- Closures
+- Concurrency features as language constructs (goroutines and channels)
+
+* Sounds great! How do I get started?
+
+There's so much to learn. I'll get you started with initial setup and
+understanding and convince you this is something to look into!
+
+** Start here after today
+- .link https://tour.golang.org/ Go Tour (Interactive Tutorial)
+
+*** Then read as much of these as you can
+- [[https://golang.org/doc/code.html][Go Workflow]]
+- [[https://golang.org/doc/effective_go.html][Effective Go]]
+- [[https://golang.org/ref/spec][Language Spec]]
+- [[https://golang.org/pkg/][Package Documentation]]
+
+* Installing Go
+
+- Option 1: Extract binary distribution to /usr/local/go
+- Option 2: Use an installer for Mac or Windows
+- Option 3: Compile and install it yourself
+- Option 4: Use a package (error prone)
+
+* Setting up a Go Workspace
+
+  <GOPATH>/
+        src/
+          github.com/
+                  ameske/
+                      hello-go/
+                          main.go
+        pkg/
+        bin/
+
+* A Simple Go Program
+
+.play -numbers hello.go
+
+* Functions in Go
+
+.play -numbers function.go
+
+* Error Handling in Go
+
+.play -numbers error.go
+
+* Structs and Types
+
+.play -numbers structs.go
+
+* Interfaces
+
+.code interface.go
+
+* First Class Functions
+
+.code firstclassfunction.go
+
+* Goroutines
+
+- Lightweight threading (green threads)
+- Multiplexed onto OS threads (M to N)
+- Scheduling handled by the runtime
+- Invoked by using the keyword "go <function>"
+
+* Goroutines
+
+- Easier to write concurrent programs which can extend to parallel programs
+- .link http://blog.golang.org/concurrency-is-not-parallelism Concurrency is not Parallelsm
+
+* Channels
+
+- Based on Hoare's Communicating Sequential Processess (CSP)
+- "Don't Communicate by sharing memory; share memory by communicating"
+- Safe way to share data between two goroutines without having to use locks in your code
+
+* Channels and Goroutines
+
+.play -numbers goroutines.go
+
+* Real World Example: A Web Server
+
+.code web.go
+
+* Interfaces At Work: io.Reader and io.Writer
+
+.code readerwriter.go
+
+* Go Language Tooling
+
+- Testing/Benchmarking (I'll demo this one)
+- Code Coverage
+- Profiling (both live and post-mortem!)
+
+* Testing
+
+.code add.go
+
+* Testing
+
+.code add_test.go
+
+* Personal Observations from a year of Go
+** Positives
+- gofmt (readability and consistency)
+- Standard Library
+- Boring (in all the right ways)
+** Pain Points
+- Garbage collected
+- Dependency management in industry (particularly w/ closed source code)
+
+* Pain Points (according to others)
+
+- Dependency Management
+- Lack of generics
+- Verbosity (really? just read Java people.....)
+
+* Questions
+
+That should be enough to hopefully get you excited! Any questions?
