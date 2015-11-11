@@ -108,7 +108,7 @@ http://www.github.com/ameske/
 - In Go <1.5, one concurrent OS thread unless otherwise asked using runtime
 - Go >=1.5, one concurrent OS thread per core by default
 - Easier to write concurrent programs which can extend to parallel programs
-- .link http://blog.golang.org/concurrency-is-not-parallelism Concurrency is not Parallelsm
+- [[http://blog.golang.org/concurrency-is-not-parallelism][Concurrency is not Parallelsm]]
 
 * Concurrency - Channels
 
